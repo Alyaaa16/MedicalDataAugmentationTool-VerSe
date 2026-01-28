@@ -54,14 +54,14 @@ if __name__ == '__main__':
         if verse2020:
             ext_length = len('_ctd-iso.json')
         else:
-            ext_length = len('_ctd.json')
+            ext_length = len('seg-subreg_ctd.json')#('_ctd.json')
             print(ext_length)
         filename_wo_folder_and_ext = filename_wo_folder[:-ext_length]
         image_id = filename_wo_folder_and_ext
         print(image_id)
         print(filename_wo_folder_and_ext)
         # get image meta data
-        image_meta_data = read_meta_data(os.path.join(verse_dataset_folder, 'images_reoriented', image_id + '.nii.gz'))
+        image_meta_data = read_meta_data(os.path.join(verse_dataset_folder, 'images_reorientation', image_id + 'ct.nii.gz'))
         spacing = np.array(image_meta_data.GetSpacing())
         origin = np.array(image_meta_data.GetOrigin())
         direction = np.array(image_meta_data.GetDirection()).reshape([3, 3])
