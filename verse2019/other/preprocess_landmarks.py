@@ -35,7 +35,7 @@ if __name__ == '__main__':
         landmark_mapping = dict([(i + 1, i) for i in range(25)] + [(28, 25)])
     else:
         print('verse19')
-        verse_dataset_folder = '../verse2019_dataset'
+        verse_dataset_folder = '/kaggle/working/verse2019_dataset'
         
         # --- DEBUG prints ---
         abs_dataset_path = os.path.abspath(verse_dataset_folder)
