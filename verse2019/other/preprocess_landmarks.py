@@ -36,11 +36,19 @@ if __name__ == '__main__':
     else:
         print('verse19')
         verse_dataset_folder = '../verse2019_dataset'
+        
+        # --- DEBUG prints ---
+        abs_dataset_path = os.path.abspath(verse_dataset_folder)
+        print(f"[INFO] verse_dataset_folder (relative): {verse_dataset_folder}")
+        print(f"[INFO] verse_dataset_folder (absolute): {abs_dataset_path}")
+
         landmark_mapping = dict([(i + 1, i) for i in range(25)])
     num_landmarks = len(landmark_mapping)
-    print(num_landmarks)
     landmarks_dict = {}
     files = glob(os.path.join(verse_dataset_folder, 'images', '*.json'))
+    print(f"[INFO] images folder: {os.path.abspath(images_folder)}")
+    print(f"[INFO] number of JSON files found: {len(files)}")
+    
     for filename in sorted(files):
         # get image id
         filename_wo_folder = os.path.basename(filename)
