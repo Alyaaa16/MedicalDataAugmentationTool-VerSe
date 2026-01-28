@@ -46,7 +46,6 @@ if __name__ == '__main__':
     num_landmarks = len(landmark_mapping)
     landmarks_dict = {}
     files = glob(os.path.join(verse_dataset_folder, 'images', '*.json'))
-    print(f"[INFO] images folder: {os.path.abspath(images_folder)}")
     print(f"[INFO] number of JSON files found: {len(files)}")
     
     for filename in sorted(files):
