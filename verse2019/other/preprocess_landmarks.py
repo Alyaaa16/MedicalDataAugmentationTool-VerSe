@@ -38,7 +38,7 @@ if __name__ == '__main__':
         verse_dataset_folder = '../verse2019_dataset'
         landmark_mapping = dict([(i + 1, i) for i in range(25)])
     num_landmarks = len(landmark_mapping)
-    print(num_landmarkes)
+    print(num_landmarks)
     landmarks_dict = {}
     files = glob(os.path.join(verse_dataset_folder, 'images', '*.json'))
     for filename in sorted(files):
