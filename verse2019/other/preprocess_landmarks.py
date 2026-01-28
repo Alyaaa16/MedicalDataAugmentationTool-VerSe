@@ -72,6 +72,12 @@ if __name__ == '__main__':
             # load json file
             json_data = json.load(f)
             for landmark in json_data:
+                print(landmark)
+                
+                # skip metadata entries
+                if 'label' not in landmark:
+                    continue
+                    
                 # convert verse coordinate system to physical coordinates
                 if verse2020:
                     coords = np.array([size[0] * spacing[0] - float(landmark['Z']), float(landmark['X']), size[2] * spacing[2] - float(landmark['Y'])])
