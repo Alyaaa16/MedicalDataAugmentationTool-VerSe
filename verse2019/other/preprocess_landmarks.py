@@ -34,9 +34,11 @@ if __name__ == '__main__':
         verse_dataset_folder = '../verse2020_dataset'
         landmark_mapping = dict([(i + 1, i) for i in range(25)] + [(28, 25)])
     else:
+        print('verse19')
         verse_dataset_folder = '../verse2019_dataset'
         landmark_mapping = dict([(i + 1, i) for i in range(25)])
     num_landmarks = len(landmark_mapping)
+    print(num_landmarkes)
     landmarks_dict = {}
     files = glob(os.path.join(verse_dataset_folder, 'images', '*.json'))
     for filename in sorted(files):
@@ -46,8 +48,10 @@ if __name__ == '__main__':
             ext_length = len('_ctd-iso.json')
         else:
             ext_length = len('_ctd.json')
+            print(ext_length)
         filename_wo_folder_and_ext = filename_wo_folder[:-ext_length]
         image_id = filename_wo_folder_and_ext
+        print(image_id)
         print(filename_wo_folder_and_ext)
         # get image meta data
         image_meta_data = read_meta_data(os.path.join(verse_dataset_folder, 'images_reoriented', image_id + '.nii.gz'))
