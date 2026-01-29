@@ -235,6 +235,7 @@ class MainLoop(MainLoopBase):
 
 
 if __name__ == '__main__':
+    print('xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx')
     network_parameters = OrderedDict([('num_filters_base', 64), ('double_features_per_level', False), ('num_levels', 5), ('activation', 'relu')])
     for cv in ['train_all', 0, 1, 2]:
         loop = MainLoop(cv, network_u, UnetClassicAvgLinear3d, network_parameters, 0.0001, output_folder_name='baseline')
