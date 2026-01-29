@@ -1,5 +1,8 @@
 
-import tensorflow as tf
+# import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
+
 from tensorflow_train.layers.layers import conv3d, concat_channels, avg_pool3d, dropout
 from tensorflow_train.layers.resize import resize_trilinear, resize_tricubic
 from tensorflow_train.layers.interpolation import upsample3d_linear, upsample3d_cubic
