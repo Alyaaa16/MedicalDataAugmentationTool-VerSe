@@ -6,9 +6,14 @@ from collections import OrderedDict
 import SimpleITK as sitk
 import numpy as np
 # import tensorflow as tf
-import tensorflow.compat.v1 as tf
-tf.disable_v2_behavior()
+# import tensorflow.compat.v1 as tf
+# tf.disable_v2_behavior()
 print('change tensorflow')
+import tensorflow.compat.v1 as tf
+import tensorflow
+tf.disable_v2_behavior()
+if not hasattr(tensorflow, 'layers'):
+    tensorflow.layers = tf.layers
 
 import utils.io.image
 import utils.io.landmark
