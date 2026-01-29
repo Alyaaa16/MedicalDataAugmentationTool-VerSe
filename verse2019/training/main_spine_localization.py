@@ -61,7 +61,7 @@ class MainLoop(MainLoopBase):
         self.save_output_images_as_uint = True  # set to False, if you want to see the direct network output
         self.save_debug_images = False
         self.has_validation_groundtruth = cv in [0, 1, 2]
-        self.local_base_folder = '../verse2019_dataset'
+        self.local_base_folder = '/kaggle/working/verse2019_dataset'
         self.image_size = [64, 64, 128]
         self.image_spacing = [8] * 3
         self.output_folder = os.path.join('./output/spine_localization/', network.__name__, unet.__name__, output_folder_name, str(cv), self.output_folder_timestamp())
